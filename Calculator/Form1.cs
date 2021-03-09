@@ -13,6 +13,7 @@ namespace Calculator
     public partial class Form1 : Form
     {
         double firstNumber;
+        double secondNumber;
         double result;
         string operation;
         public Form1()
@@ -157,40 +158,82 @@ namespace Calculator
 
         private void btnSum_Click(object sender, EventArgs e)
         {
-            operationBox.Text = textScr.Text + "+";
-            firstNumber = Convert.ToDouble(textScr.Text);
+            //if (operation != "")
+            //{
+                if (textScr.Text != "")
+                {
+                    firstNumber = Convert.ToDouble(textScr.Text);
+                    operationBox.Text = textScr.Text + "+";
+                }
+                else
+                {
+                    operationBox.Text = result + "+";
+                }
+            //}
+            //else
+            //{
+            //    btnEqu_Click();
+            //}
             textScr.Text = null;
             operation = "+";
         }
 
         private void btnSub_Click(object sender, EventArgs e)
         {
-            operationBox.Text = textScr.Text + "-";
-            firstNumber = Convert.ToDouble(textScr.Text);
+            if (textScr.Text != "")
+            {
+                firstNumber = Convert.ToDouble(textScr.Text);
+                operationBox.Text = textScr.Text + "-";
+            }
+            else
+            {
+                operationBox.Text = result + "-";
+            }
             textScr.Text = null;
             operation = "-";
         }
 
         private void btnMul_Click(object sender, EventArgs e)
         {
-            operationBox.Text = textScr.Text + "*";
-            firstNumber = Convert.ToDouble(textScr.Text);
+            if (textScr.Text != "")
+            {
+                firstNumber = Convert.ToDouble(textScr.Text);
+                operationBox.Text = textScr.Text + "*";
+            }
+            else
+            {
+                operationBox.Text = result + "*";
+            }
             textScr.Text = null;
             operation = "*";
         }
 
         private void btnDev_Click(object sender, EventArgs e)
         {
-            operationBox.Text = textScr.Text + "/";
-            firstNumber = Convert.ToDouble(textScr.Text);
+            if (textScr.Text != "")
+            {
+                firstNumber = Convert.ToDouble(textScr.Text);
+                operationBox.Text = textScr.Text + "/";
+            }
+            else
+            {
+                operationBox.Text = result + "/";
+            }
             textScr.Text = null;
             operation = "/";
         }
 
         private void btnSqr_Click(object sender, EventArgs e)
         {
-            operationBox.Text = textScr.Text + "^";
-            firstNumber = Convert.ToDouble(textScr.Text);
+            if (textScr.Text != "")
+            {
+                firstNumber = Convert.ToDouble(textScr.Text);
+                operationBox.Text = textScr.Text + "^";
+            }
+            else
+            {
+                operationBox.Text = result + "^";
+            }
             textScr.Text = null;
             operation = "^";
         }
@@ -200,6 +243,7 @@ namespace Calculator
             operationBox.Text = "√" + textScr.Text;
             result = Math.Sqrt(Convert.ToDouble(textScr.Text));
             operationBox.Text = "√" + textScr.Text + "=" + result;
+            firstNumber = result;
             textScr.Text = null;
             operation = null;
         }
@@ -214,34 +258,25 @@ namespace Calculator
                     case "+":
                         result = firstNumber + Convert.ToDouble(textScr.Text);
                         operationBox.Text = operationBox.Text + result;
-                        textScr.Text = null;
-                        operation = null;
                         break;
                     case "-":
                         result = firstNumber - Convert.ToDouble(textScr.Text);
                         operationBox.Text = operationBox.Text + result;
-                        textScr.Text = null;
-                        operation = null;
                         break;
                     case "*":
                         result = firstNumber * Convert.ToDouble(textScr.Text);
                         operationBox.Text = operationBox.Text + result;
-                        textScr.Text = null;
-                        operation = null;
                         break;
                     case "/":
                         if (Convert.ToDouble(textScr.Text) != 0)
                         {
                             result = firstNumber / Convert.ToDouble(textScr.Text);
                             operationBox.Text = operationBox.Text + result;
-                            textScr.Text = null;
-                            operation = null;
                             break;
                         }
                         else
                         {
                             MessageBox.Show("You can't devide by 0!");
-                            operation = null;
                             break;
                         }
                     case "^":
@@ -251,10 +286,11 @@ namespace Calculator
                             result = result * firstNumber;
                         }
                         operationBox.Text = operationBox.Text + result;
-                        textScr.Text = null;
-                        operation = null;
                         break;
                 }
+                firstNumber = result;
+                textScr.Text = null;
+                operation = null;
             }
         }
 
