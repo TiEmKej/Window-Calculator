@@ -316,38 +316,42 @@ namespace Calculator
 
         private void Equal()
         {
-            operationBox.Text = operationBox.Text + textScr.Text + "=";
-            switch (operation)
+            if (textScr.Text != "")
             {
-                case "+":
-                    result = firstNumber + Convert.ToDouble(textScr.Text);
-                    break;
-                case "-":
-                    result = firstNumber - Convert.ToDouble(textScr.Text);
-                    break;
-                case "*":
-                    result = firstNumber * Convert.ToDouble(textScr.Text);
-                    break;
-                case "/":
-                    if (Convert.ToDouble(textScr.Text) != 0)
-                    {
-                        result = firstNumber / Convert.ToDouble(textScr.Text);
+                operationBox.Text = operationBox.Text + textScr.Text + "=";
+                secondNumber = Convert.ToDouble(textScr.Text);
+                switch (operation)
+                {
+                    case "+":
+                        result = firstNumber + secondNumber;
                         break;
-                    }
-                    else
-                    {
-                        MessageBox.Show("You can't devide by 0!");
+                    case "-":
+                        result = firstNumber - secondNumber;
                         break;
-                    }
-                case "^":
-                    result = firstNumber;
-                    for (int i = 1; i < Convert.ToInt32(textScr.Text); i++)
-                    {
-                        result = result * firstNumber;
-                    }
-                    break;
+                    case "*":
+                        result = firstNumber * secondNumber;
+                        break;
+                    case "/":
+                        if (secondNumber != 0)
+                        {
+                            result = firstNumber / secondNumber;
+                            break;
+                        }
+                        else
+                        {
+                            MessageBox.Show("You can't devide by 0!");
+                            break;
+                        }
+                    case "^":
+                        result = firstNumber;
+                        for (int i = 1; i < secondNumber; i++)
+                        {
+                            result = result * firstNumber;
+                        }
+                        break;
+                }
+                operationBox.Text = operationBox.Text + result;
             }
-            operationBox.Text = operationBox.Text + result;
             firstNumber = result;
             textScr.Text = null;
             operation = null;
