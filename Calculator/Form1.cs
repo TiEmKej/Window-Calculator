@@ -291,9 +291,16 @@ namespace Calculator
             {
                 Equal();
             }
-            result = Math.Sqrt(firstNumber);
-            operationBox.Text = "√" + firstNumber + "=" + result;
-            firstNumber = result;
+            if (firstNumber >= 0)
+            {
+                result = Math.Sqrt(firstNumber);
+                operationBox.Text = "√" + firstNumber + "=" + result;
+                firstNumber = result;               
+            }
+            else
+            {
+                MessageBox.Show("You can't take square root from negative numbers", "Square root error");
+            }
             textScr.Text = "0";
             operation = "";
         }
@@ -332,6 +339,7 @@ namespace Calculator
             toolTip1.SetToolTip(this.btnMul, "Multiply number by a number");
             toolTip1.SetToolTip(this.btnDev, "Devide number by another number. Can't devide by 0");
             toolTip1.SetToolTip(this.btnSqr, "Number to power of another number");
+            toolTip1.SetToolTip(this.btnHis, "Click to show history");
         }
 
         private void Equal()
