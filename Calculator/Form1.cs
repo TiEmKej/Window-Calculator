@@ -183,11 +183,11 @@ namespace Calculator
         {
             if (textScr.Text == "0" && !textScr.Text.Contains("-"))
             {
-                textScr.Text = " -";
+                textScr.Text = "-";
             }
             else if(operation == "")
             {
-                if (textScr.Text != "0")
+                if (textScr.Text != "0" && !textScr.Text.Contains("-"))
                 {
                     firstNumber = Convert.ToDouble(textScr.Text);
                     operationBox.Text = firstNumber + "-";
@@ -334,7 +334,7 @@ namespace Calculator
 
         private void Equal()
         {
-            if (operation != "")
+            if (operation != "" && textScr.Text != "-")
             {
                 secondNumber = Convert.ToDouble(textScr.Text);
                 switch (operation)
@@ -363,16 +363,12 @@ namespace Calculator
                         result = Math.Pow(firstNumber, secondNumber);
                         break;
                 }
-                if (operation == "/" && secondNumber == 0)
+                if (operation != "/" && secondNumber != 0)
                 {
-
-                }
-                else
-                {
-                operationBox.Text = firstNumber + operation + secondNumber + "=" + result;
-                operation = "";
-                firstNumber = result;
-                }                
+                    operationBox.Text = firstNumber + operation + secondNumber + "=" + result;
+                    operation = "";
+                    firstNumber = result;
+                }               
                 textScr.Text = "0";              
             }
         }

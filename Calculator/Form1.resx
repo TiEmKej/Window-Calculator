@@ -694,7 +694,7 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="operationBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 6</value>
+    <value>12, 8</value>
   </data>
   <data name="operationBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 23</value>
