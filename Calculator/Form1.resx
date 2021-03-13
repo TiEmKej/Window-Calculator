@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn1.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="btn2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -171,7 +171,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn2.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="btn3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -198,7 +198,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn3.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="btn4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -225,7 +225,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn4.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="btn5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -252,7 +252,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn5.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="btn6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -279,7 +279,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn6.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="btn7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -306,7 +306,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn7.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="btn8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -333,7 +333,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn8.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="btn9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -360,7 +360,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn9.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="btn0.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -387,7 +387,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn0.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="btnCE.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -414,7 +414,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCE.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="btnDot.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -441,7 +441,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDot.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="btnSum.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -468,7 +468,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSum.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btnSub.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -495,7 +495,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSub.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnMul.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -522,7 +522,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnMul.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnDev.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -549,10 +549,14 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDev.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnEqu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnEqu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnEqu.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 288</value>
@@ -576,7 +580,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnEqu.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnSqr.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -603,7 +607,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSqr.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnRoot.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -630,7 +634,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnRoot.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnC.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -657,16 +661,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnC.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="textScr.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="textScr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 35</value>
+    <value>68, 35</value>
   </data>
   <data name="textScr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 23</value>
+    <value>161, 23</value>
   </data>
   <data name="textScr.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -674,7 +678,6 @@
   <data name="textScr.Text" xml:space="preserve">
     <value>0</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textScr.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -688,16 +691,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textScr.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="operationBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="operationBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 6</value>
+    <value>68, 8</value>
   </data>
   <data name="operationBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 23</value>
+    <value>161, 23</value>
   </data>
   <data name="operationBox.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -718,6 +721,51 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;operationBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnHis.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="btnHis.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAuBJREFUWEftmLtqckEQx/Mc1lY+h7WIhUUIQay+Uix9B8VHsEjlA4iPYGEtEjCF
+        kigqEhUveEm+H3EQjeecnTmRkMJfITt7mf27O3s7d59/kpssCzdZFm6yLISXNR6Pq9VqPp/PZDLZbPbf
+        FyQwyaSIClLVjlnWbrer1+v39/cooO/BYCAFJ5BJERWoRmWaSIEam6xGo5FMJkul0vv7u2QFQjUq04SG
+        kqVDK2uz2RQKhVwu5yeo3W4/Pz+LcQ5NaEhznEiWC5Us/KbT6VqtJrYXr6+vb29vYnhBc5woh9ktC0ep
+        VKrVaontg1MW4ARXGmUOWQw7f9GpCTSyAFc4dM6mQxYBETx3R5SyAIe4FcOHIFksH0JVDBd6WYDb4LXp
+        K4vNhoWtjFAwycItzgP2M19ZbINsOWIoMMkCnNOFGBf4ymKD1g8VWGXhnC7EuMBbFscZR4cYOqyygC78
+        zk1vWZxoIIaOELICevGWxRXA8wwOIIQsuqAjMc7xlsXlRFI6CJRisag/wo/4dfRdFouW+X54eOBXebIi
+        JRaL3X1BwqTML4K/y0JKNBqlg0gkslwuJTeQSqVC/cfHx0QiQQJTChRwc5TUOR6T+PT0hPdyuSy2i4Ms
+        poMdkgRTud/vpcyFQRbzGI/HZ7OZ2C5OJ5GRnk6nhP9kMpHiQLSTeEA5fUdQxpjBcDjsdrur1Wo+n5Nw
+        Rqc25K/CaDTq9/sfHx9sGaQl9wLzBvFzGCdGa7FYMPC9Xm+9XkvBCebt9FqwyxBnDFun05GsE8yHz4EQ
+        D6lLttvty8vLZZARjuajGprNpuliYyXkxcZ6DTSB25DXQDBdmk2EvzQf0D8x9Pz0iQGEqvJBpuQ6DzIg
+        DjTPVw04uc7z9QCO+Is/nE2a40S5hlSygGEnIAhVpd9TaEJDmjvn7ohW1gGWDwtbfwulGpVpErzuLrHJ
+        AjabP/fZ7RSOM/r+Kx8pf4ebLAs3WRZusvR8fv4HsswaVdRmJJAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnHis.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnHis.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 8</value>
+  </data>
+  <data name="btnHis.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="btnHis.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;btnHis.Name" xml:space="preserve">
+    <value>btnHis</value>
+  </data>
+  <data name="&gt;&gt;btnHis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnHis.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnHis.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

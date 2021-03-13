@@ -16,6 +16,7 @@ namespace Calculator
         double secondNumber;
         double result;
         string operation = "";
+        string history;
         public Form1()
         {
             InitializeComponent();
@@ -181,9 +182,13 @@ namespace Calculator
 
         private void btnSub_Click(object sender, EventArgs e)
         {
-            if (operation == "")
+            if (textScr.Text == "0" && !textScr.Text.Contains("-"))
             {
-                if (textScr.Text != "0")
+                textScr.Text = "-";
+            }
+            else if(operation == "")
+            {
+                if (textScr.Text != "0" && !textScr.Text.Contains("-"))
                 {
                     firstNumber = Convert.ToDouble(textScr.Text);
                     operationBox.Text = firstNumber + "-";
@@ -192,14 +197,16 @@ namespace Calculator
                 {
                     operationBox.Text = result + "-";
                 }
+                textScr.Text = "0";
+                operation = "-";
             }
             else
             {
                 Equal();
                 operationBox.Text = result + "-";
+                textScr.Text = "0";
+                operation = "-";
             }
-            textScr.Text = "0";
-            operation = "-";
         }
 
         private void btnMul_Click(object sender, EventArgs e)
@@ -303,6 +310,7 @@ namespace Calculator
             result = 0;
             textScr.Text = "0";
             operationBox.Text = "0";
+            history = "";
         }
 
         private void btnCE_Click(object sender, EventArgs e)
@@ -328,7 +336,7 @@ namespace Calculator
 
         private void Equal()
         {
-            if (operation != "")
+            if (operation != "" && textScr.Text != "-")
             {
                 secondNumber = Convert.ToDouble(textScr.Text);
                 switch (operation)
@@ -350,25 +358,27 @@ namespace Calculator
                         }
                         else
                         {
-                            MessageBox.Show("You can't devide by 0!");
+                            MessageBox.Show("You can't devide by 0!", "Devide error");
                             break;
                         }
                     case "^":
                         result = Math.Pow(firstNumber, secondNumber);
                         break;
                 }
-                if (operation == "/" && secondNumber == 0)
+                if ((operation != "/") || (operation == "/" && secondNumber != 0))
                 {
-
-                }
-                else
-                {
-                operationBox.Text = firstNumber + operation + secondNumber + "=" + result;
-                operation = "";
-                firstNumber = result;
-                }                
+                    operationBox.Text = firstNumber + operation + secondNumber + "=" + result;
+                    history = history + "\n" + operationBox.Text;
+                    operation = "";
+                    firstNumber = result;
+                }               
                 textScr.Text = "0";              
             }
+        }
+
+        private void btnHis_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(history, "History");
         }
     }
 }
