@@ -13,8 +13,9 @@ namespace Calculator
     public partial class Form1 : Form
     {
         double firstNumber;
+        double secondNumber;
         double result;
-        string operation;
+        string operation = "";
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Calculator
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "1";
             }
@@ -34,7 +35,7 @@ namespace Calculator
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "2";
             }
@@ -46,7 +47,7 @@ namespace Calculator
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "3";
             }
@@ -58,7 +59,7 @@ namespace Calculator
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "4";
             }
@@ -70,7 +71,7 @@ namespace Calculator
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "5";
             }
@@ -82,7 +83,7 @@ namespace Calculator
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "6";
             }
@@ -94,7 +95,7 @@ namespace Calculator
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "7";
             }
@@ -106,7 +107,7 @@ namespace Calculator
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "8";
             }
@@ -118,7 +119,7 @@ namespace Calculator
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "9";
             }
@@ -130,7 +131,7 @@ namespace Calculator
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "0";
             }
@@ -144,7 +145,7 @@ namespace Calculator
         {
             if (!textScr.Text.Contains(","))
             {
-                if (textScr.Text == "0" || textScr.Text == null)
+                if (textScr.Text == "0")
                 {
                     textScr.Text = "0,";
                 }
@@ -157,120 +158,158 @@ namespace Calculator
 
         private void btnSum_Click(object sender, EventArgs e)
         {
-            operationBox.Text = textScr.Text + "+";
-            firstNumber = Convert.ToDouble(textScr.Text);
-            textScr.Text = null;
+            if (operation == "")
+            {
+                if (textScr.Text != "0")
+                {
+                    firstNumber = Convert.ToDouble(textScr.Text);
+                    operationBox.Text = textScr.Text + "+";
+                }
+                else
+                {
+                    operationBox.Text = result + "+";
+                }
+            }
+            else
+            {
+                Equal();
+                operationBox.Text = result + "+";
+            }
+            textScr.Text = "0";
             operation = "+";
         }
 
         private void btnSub_Click(object sender, EventArgs e)
         {
-            operationBox.Text = textScr.Text + "-";
-            firstNumber = Convert.ToDouble(textScr.Text);
-            textScr.Text = null;
+            if (operation == "")
+            {
+                if (textScr.Text != "0")
+                {
+                    firstNumber = Convert.ToDouble(textScr.Text);
+                    operationBox.Text = firstNumber + "-";
+                }
+                else
+                {
+                    operationBox.Text = result + "-";
+                }
+            }
+            else
+            {
+                Equal();
+                operationBox.Text = result + "-";
+            }
+            textScr.Text = "0";
             operation = "-";
         }
 
         private void btnMul_Click(object sender, EventArgs e)
         {
-            operationBox.Text = textScr.Text + "*";
-            firstNumber = Convert.ToDouble(textScr.Text);
-            textScr.Text = null;
+            if (operation == "")
+            {
+                if (textScr.Text != "0")
+                {
+                    firstNumber = Convert.ToDouble(textScr.Text);
+                    operationBox.Text = firstNumber + "*";
+                }
+                else
+                {
+                    operationBox.Text = result + "*";
+                }
+            }
+            else
+            {
+                Equal();
+                operationBox.Text = result + "*";
+            }
+            textScr.Text = "0";
             operation = "*";
         }
 
         private void btnDev_Click(object sender, EventArgs e)
         {
-            operationBox.Text = textScr.Text + "/";
-            firstNumber = Convert.ToDouble(textScr.Text);
-            textScr.Text = null;
+            if (operation == "")
+            {
+                if (textScr.Text != "0")
+                {
+                    firstNumber = Convert.ToDouble(textScr.Text);
+                    operationBox.Text = firstNumber + "/";
+                }
+                else
+                {
+                    operationBox.Text = result + "/";
+                }
+            }
+            else
+            {
+                Equal();
+                operationBox.Text = result + "/";
+            }
+            textScr.Text = "0";
             operation = "/";
         }
 
         private void btnSqr_Click(object sender, EventArgs e)
         {
-            operationBox.Text = textScr.Text + "^";
-            firstNumber = Convert.ToDouble(textScr.Text);
-            textScr.Text = null;
+            if (operation == "")
+            {
+                if (textScr.Text != "0")
+                {
+                    firstNumber = Convert.ToDouble(textScr.Text);
+                    operationBox.Text = firstNumber + "^";
+                }
+                else
+                {
+                    operationBox.Text = result + "^";
+                }
+            }
+            else
+            {
+                Equal();
+            }
+            textScr.Text = "0";
             operation = "^";
         }
 
         private void btnRoot_Click(object sender, EventArgs e)
         {
-            operationBox.Text = "√" + textScr.Text;
-            result = Math.Sqrt(Convert.ToDouble(textScr.Text));
-            operationBox.Text = "√" + textScr.Text + "=" + result;
-            textScr.Text = null;
-            operation = null;
+            if (operation == "" && result != 0)
+            {
+                firstNumber = result;
+            }
+            else if (operation == "")
+            {
+                firstNumber = Convert.ToDouble(textScr.Text);
+            }
+            else
+            {
+                Equal();
+            }
+            result = Math.Sqrt(firstNumber);
+            operationBox.Text = "√" + firstNumber + "=" + result;
+            firstNumber = result;
+            textScr.Text = "0";
+            operation = "";
         }
 
         private void btnEqu_Click(object sender, EventArgs e)
         {
-            if (operation != null)
-            {
-                operationBox.Text = operationBox.Text + textScr.Text + "=";
-                switch (operation)
-                {
-                    case "+":
-                        result = firstNumber + Convert.ToDouble(textScr.Text);
-                        operationBox.Text = operationBox.Text + result;
-                        textScr.Text = null;
-                        operation = null;
-                        break;
-                    case "-":
-                        result = firstNumber - Convert.ToDouble(textScr.Text);
-                        operationBox.Text = operationBox.Text + result;
-                        textScr.Text = null;
-                        operation = null;
-                        break;
-                    case "*":
-                        result = firstNumber * Convert.ToDouble(textScr.Text);
-                        operationBox.Text = operationBox.Text + result;
-                        textScr.Text = null;
-                        operation = null;
-                        break;
-                    case "/":
-                        if (Convert.ToDouble(textScr.Text) != 0)
-                        {
-                            result = firstNumber / Convert.ToDouble(textScr.Text);
-                            operationBox.Text = operationBox.Text + result;
-                            textScr.Text = null;
-                            operation = null;
-                            break;
-                        }
-                        else
-                        {
-                            MessageBox.Show("You can't devide by 0!");
-                            operation = null;
-                            break;
-                        }
-                    case "^":
-                        result = firstNumber;
-                        for (int i = 1; i < Convert.ToInt32(textScr.Text); i++)
-                        {
-                            result = result * firstNumber;
-                        }
-                        operationBox.Text = operationBox.Text + result;
-                        textScr.Text = null;
-                        operation = null;
-                        break;
-                }
-            }
+            Equal();
         }
 
         private void btnC_Click(object sender, EventArgs e)
         {
             firstNumber = 0;
-            operation = null;
+            operation = "";
             result = 0;
-            textScr.Text = null;
-            operationBox.Text = null;
+            textScr.Text = "0";
+            operationBox.Text = "0";
         }
 
         private void btnCE_Click(object sender, EventArgs e)
         {
-            textScr.Text = null;
+            textScr.Text = "0";
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             ToolTip toolTip1 = new ToolTip();
@@ -285,6 +324,51 @@ namespace Calculator
             toolTip1.SetToolTip(this.btnMul, "Multiply number by a number");
             toolTip1.SetToolTip(this.btnDev, "Devide number by another number. Can't devide by 0");
             toolTip1.SetToolTip(this.btnSqr, "Number to power of another number");
+        }
+
+        private void Equal()
+        {
+            if (operation != "")
+            {
+                secondNumber = Convert.ToDouble(textScr.Text);
+                switch (operation)
+                {
+                    case "+":
+                        result = firstNumber + secondNumber;
+                        break;
+                    case "-":
+                        result = firstNumber - secondNumber;
+                        break;
+                    case "*":
+                        result = firstNumber * secondNumber;
+                        break;
+                    case "/":
+                        if (secondNumber != 0)
+                        {
+                            result = firstNumber / secondNumber;
+                            break;
+                        }
+                        else
+                        {
+                            MessageBox.Show("You can't devide by 0!");
+                            break;
+                        }
+                    case "^":
+                        result = Math.Pow(firstNumber, secondNumber);
+                        break;
+                }
+                if (operation == "/" && secondNumber == 0)
+                {
+
+                }
+                else
+                {
+                operationBox.Text = firstNumber + operation + secondNumber + "=" + result;
+                operation = "";
+                firstNumber = result;
+                }                
+                textScr.Text = "0";              
+            }
         }
     }
 }

@@ -216,13 +216,17 @@ namespace Calculator
             // 
             // textScr
             // 
+            this.textScr.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.textScr, "textScr");
             this.textScr.Name = "textScr";
+            this.textScr.ReadOnly = true;
             // 
             // operationBox
             // 
+            this.operationBox.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.operationBox, "operationBox");
             this.operationBox.Name = "operationBox";
+            this.operationBox.ReadOnly = true;
             // 
             // Form1
             // 
