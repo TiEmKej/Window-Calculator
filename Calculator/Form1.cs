@@ -181,7 +181,11 @@ namespace Calculator
 
         private void btnSub_Click(object sender, EventArgs e)
         {
-            if (operation == "")
+            if (textScr.Text == "0" && !textScr.Text.Contains("-"))
+            {
+                textScr.Text = " -";
+            }
+            else if(operation == "")
             {
                 if (textScr.Text != "0")
                 {
@@ -192,14 +196,16 @@ namespace Calculator
                 {
                     operationBox.Text = result + "-";
                 }
+                textScr.Text = "0";
+                operation = "-";
             }
             else
             {
                 Equal();
                 operationBox.Text = result + "-";
+                textScr.Text = "0";
+                operation = "-";
             }
-            textScr.Text = "0";
-            operation = "-";
         }
 
         private void btnMul_Click(object sender, EventArgs e)
