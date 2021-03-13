@@ -52,6 +52,7 @@ namespace Calculator
             this.btnC = new System.Windows.Forms.Button();
             this.textScr = new System.Windows.Forms.TextBox();
             this.operationBox = new System.Windows.Forms.TextBox();
+            this.btnHis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn1
@@ -228,11 +229,20 @@ namespace Calculator
             this.operationBox.Name = "operationBox";
             this.operationBox.ReadOnly = true;
             // 
+            // btnHis
+            // 
+            this.btnHis.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnHis, "btnHis");
+            this.btnHis.Name = "btnHis";
+            this.btnHis.UseVisualStyleBackColor = false;
+            this.btnHis.Click += new System.EventHandler(this.btnHis_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnHis);
             this.Controls.Add(this.operationBox);
             this.Controls.Add(this.textScr);
             this.Controls.Add(this.btnC);
@@ -255,6 +265,7 @@ namespace Calculator
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -287,6 +298,7 @@ namespace Calculator
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.TextBox textScr;
         private System.Windows.Forms.TextBox operationBox;
+        private System.Windows.Forms.Button btnHis;
     }
 }
 
