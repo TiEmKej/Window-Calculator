@@ -15,7 +15,7 @@ namespace Calculator
         double firstNumber;
         double secondNumber;
         double result;
-        string operation;
+        string operation = "";
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Calculator
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "1";
             }
@@ -35,7 +35,7 @@ namespace Calculator
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "2";
             }
@@ -47,7 +47,7 @@ namespace Calculator
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "3";
             }
@@ -59,7 +59,7 @@ namespace Calculator
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "4";
             }
@@ -71,7 +71,7 @@ namespace Calculator
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "5";
             }
@@ -83,7 +83,7 @@ namespace Calculator
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "6";
             }
@@ -95,7 +95,7 @@ namespace Calculator
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "7";
             }
@@ -107,7 +107,7 @@ namespace Calculator
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "8";
             }
@@ -119,7 +119,7 @@ namespace Calculator
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "9";
             }
@@ -131,7 +131,7 @@ namespace Calculator
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (textScr.Text == "0" || textScr.Text == null)
+            if (textScr.Text == "0")
             {
                 textScr.Text = "0";
             }
@@ -145,7 +145,7 @@ namespace Calculator
         {
             if (!textScr.Text.Contains(","))
             {
-                if (textScr.Text == "0" || textScr.Text == null)
+                if (textScr.Text == "0")
                 {
                     textScr.Text = "0,";
                 }
@@ -158,9 +158,9 @@ namespace Calculator
 
         private void btnSum_Click(object sender, EventArgs e)
         {
-            if (operation == "" || operation == null)
+            if (operation == "")
             {
-                if (textScr.Text != "")
+                if (textScr.Text != "0")
                 {
                     firstNumber = Convert.ToDouble(textScr.Text);
                     operationBox.Text = textScr.Text + "+";
@@ -175,18 +175,18 @@ namespace Calculator
                 Equal();
                 operationBox.Text = result + "+";
             }
-            textScr.Text = null;
+            textScr.Text = "0";
             operation = "+";
         }
 
         private void btnSub_Click(object sender, EventArgs e)
         {
-            if (operation == "" || operation == null)
+            if (operation == "")
             {
-                if (textScr.Text != "")
+                if (textScr.Text != "0")
                 {
                     firstNumber = Convert.ToDouble(textScr.Text);
-                    operationBox.Text = textScr.Text + "-";
+                    operationBox.Text = firstNumber + "-";
                 }
                 else
                 {
@@ -198,18 +198,18 @@ namespace Calculator
                 Equal();
                 operationBox.Text = result + "-";
             }
-            textScr.Text = null;
+            textScr.Text = "0";
             operation = "-";
         }
 
         private void btnMul_Click(object sender, EventArgs e)
         {
-            if (operation == "" || operation == null)
+            if (operation == "")
             {
-                if (textScr.Text != "")
+                if (textScr.Text != "0")
                 {
                     firstNumber = Convert.ToDouble(textScr.Text);
-                    operationBox.Text = textScr.Text + "*";
+                    operationBox.Text = firstNumber + "*";
                 }
                 else
                 {
@@ -221,18 +221,18 @@ namespace Calculator
                 Equal();
                 operationBox.Text = result + "*";
             }
-            textScr.Text = null;
+            textScr.Text = "0";
             operation = "*";
         }
 
         private void btnDev_Click(object sender, EventArgs e)
         {
-            if (operation == "" || operation == null)
+            if (operation == "")
             {
-                if (textScr.Text != "")
+                if (textScr.Text != "0")
                 {
                     firstNumber = Convert.ToDouble(textScr.Text);
-                    operationBox.Text = textScr.Text + "/";
+                    operationBox.Text = firstNumber + "/";
                 }
                 else
                 {
@@ -244,18 +244,18 @@ namespace Calculator
                 Equal();
                 operationBox.Text = result + "/";
             }
-            textScr.Text = null;
+            textScr.Text = "0";
             operation = "/";
         }
 
         private void btnSqr_Click(object sender, EventArgs e)
         {
-            if (operation == "" || operation == null)
+            if (operation == "")
             {
-                if (textScr.Text != "")
+                if (textScr.Text != "0")
                 {
                     firstNumber = Convert.ToDouble(textScr.Text);
-                    operationBox.Text = textScr.Text + "^";
+                    operationBox.Text = firstNumber + "^";
                 }
                 else
                 {
@@ -266,18 +266,29 @@ namespace Calculator
             {
                 Equal();
             }
-            textScr.Text = null;
+            textScr.Text = "0";
             operation = "^";
         }
 
         private void btnRoot_Click(object sender, EventArgs e)
         {
-            operationBox.Text = "√" + textScr.Text;
-            result = Math.Sqrt(Convert.ToDouble(textScr.Text));
-            operationBox.Text = "√" + textScr.Text + "=" + result;
+            if (operation == "" && result != 0)
+            {
+                firstNumber = result;
+            }
+            else if (operation == "")
+            {
+                firstNumber = Convert.ToDouble(textScr.Text);
+            }
+            else
+            {
+                Equal();
+            }
+            result = Math.Sqrt(firstNumber);
+            operationBox.Text = "√" + firstNumber + "=" + result;
             firstNumber = result;
-            textScr.Text = null;
-            operation = null;
+            textScr.Text = "0";
+            operation = "";
         }
 
         private void btnEqu_Click(object sender, EventArgs e)
@@ -288,16 +299,17 @@ namespace Calculator
         private void btnC_Click(object sender, EventArgs e)
         {
             firstNumber = 0;
-            operation = null;
+            operation = "";
             result = 0;
-            textScr.Text = null;
-            operationBox.Text = null;
+            textScr.Text = "0";
+            operationBox.Text = "0";
         }
 
         private void btnCE_Click(object sender, EventArgs e)
         {
-            textScr.Text = null;
+            textScr.Text = "0";
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             ToolTip toolTip1 = new ToolTip();
@@ -316,9 +328,8 @@ namespace Calculator
 
         private void Equal()
         {
-            if (textScr.Text != "")
+            if (operation != "")
             {
-                operationBox.Text = operationBox.Text + textScr.Text + "=";
                 secondNumber = Convert.ToDouble(textScr.Text);
                 switch (operation)
                 {
@@ -343,19 +354,21 @@ namespace Calculator
                             break;
                         }
                     case "^":
-                        result = firstNumber;
-                        for (int i = 1; i < secondNumber; i++)
-                        {
-                            result = result * firstNumber;
-                        }
+                        result = Math.Pow(firstNumber, secondNumber);
                         break;
                 }
-                operationBox.Text = operationBox.Text + result;
-            }
-            firstNumber = result;
-            textScr.Text = null;
-            operation = null;
-        }
+                if (operation == "/" && secondNumber == 0)
+                {
 
+                }
+                else
+                {
+                operationBox.Text = firstNumber + operation + secondNumber + "=" + result;
+                operation = "";
+                firstNumber = result;
+                }                
+                textScr.Text = "0";              
+            }
+        }
     }
 }
